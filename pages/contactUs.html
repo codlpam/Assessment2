@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons_logos/titleLogo.png">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <script src="../scripts/header.js"></script>
+
+    <div class="unified_banner">
+        <h1>Contact Us</h1>
+    </div>
+<!--    container to hold 2 form columns-->
+    <form>
+        <div id="contactus_form_container">
+    <!--        form column one-->
+
+            <div class="contactus_form_column">
+                <br>
+                <label for="contactus_name_text_input">Name<span class="required_form">*</span></label><br>
+                <input type="text" id="contactus_name_text_input" placeholder="Enter your name" required>
+                <br>
+                <br>
+
+                <label for="contactus_phone_number">Contact number</label><br>
+                <input type="tel" id="contactus_phone_number" name="phone_number" placeholder="+64271231234" pattern="^[+]?[0-9]{8,14}">
+                <br>
+                <br>
+                <label for="contactus_email_address">Contact email<span class="required_form">*</span></label><br>
+<!--                RegEx sourced from https://www.w3schools.com/TAGS/att_input_pattern.asp-->
+                <input type="email" id="contactus_email_address" name="email_address" placeholder="example@domain.co.nz"
+                       pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                <br>
+                <br>
+                <label for="contactus_contact_reason">Subject line</label><br>
+                <select id="contactus_contact_reason" name="contact_reason">
+                    <option value="question" selected>Question</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+    <!--        form column two-->
+            <div class="contactus_form_column">
+                <br>
+                <label for="contactus_other_specify">If other, please specify</label><br>
+                <input type="text" id="contactus_other_specify" placeholder="Other">
+                <br>
+                <br>
+                <label for="contactus_text_area">Enter your query here<span class="required_form">*</span></label><br>
+                <textarea id="contactus_text_area" name="contact_text_area" required></textarea>
+                <br>
+                <br>
+                <label for="contactus_submit_button"></label>
+                <input id="contactus_submit_button" type="submit" value="Submit">
+            </div>
+
+        </div>
+    </form>
+<!--    container for map and contact information layout-->
+    <div id="contactus_details_map_container">
+        <iframe class="contactus_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0529742207937!2d175.27727031514775!3d-37.78879827975693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d18a57fa16281%3A0x72b05e2e8812d179!2sWaikato%20Institute%20of%20Technology%2C%20City%20Campus!5e0!3m2!1sen!2snz!4v1647895406909!5m2!1sen!2snz"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <div class="contactus_information">
+            <h1>Contact Details</h1>
+            <hr>
+            <p><u>Phone</u><br><a href="tel:08002946832">0800 294 6832</a></p>
+            <p><u>Email</u><br><a href="mailto:info@thirtytwo.co.nz">info@thirtytwo.co.nz</a></p>
+            <p><u>Address</u><br>Tristram street, Hamilton central<br>Hamilton City</p>
+            <p><u>Social media</u><br>
+<!--        discord icon - https://icon-icons.com/download/101785/PNG/32/
+            facebook icon - https://icon-icons.com/download/59205/PNG/32/-->
+            <a href="https://facebook.com"><img src="../images/icons_logos/facebook.png" alt="facebook social media link"></a>
+            <a href="https://discord.com"><img src="../images/icons_logos/discord.png" alt="discord social media link"></a>
+            </p>
+        </div>
+
+    </div>
+    <br>
+    <script src="../scripts/footer.js" defer></script>
+</body>
+</html>
